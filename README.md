@@ -1,4 +1,4 @@
-# A sample of algorithmic trading platform for Bitmex.
+# Sample algorithmic trading platform for Bitmex
 
 Working condition tested on Linux:
 - Mint 17, Python 3.4
@@ -39,8 +39,7 @@ CREATE TABLE `coins` (
   KEY `EMI_AMOUNT_ix` (`EMI`,`AMOUNT`),
   KEY `DIR_ix` (`DIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-```
-```SQL
+
 CREATE TABLE `robots` (
   `EMI` tinyint DEFAULT NULL,
   `ISIN` varchar(10) DEFAULT NULL,
