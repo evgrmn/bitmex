@@ -13,6 +13,7 @@ Bitmex API-connector is used from https://github.com/BitMEX/api-connectors
 
 MySQL tables:
 
+```SQL
 CREATE TABLE `coins` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `EXECID` varchar(45) DEFAULT NULL,
@@ -38,7 +39,7 @@ CREATE TABLE `coins` (
   KEY `EMI_AMOUNT_ix` (`EMI`,`AMOUNT`),
   KEY `DIR_ix` (`DIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+```
 CREATE TABLE `robots` (
   `EMI` tinyint DEFAULT NULL,
   `ISIN` varchar(10) DEFAULT NULL,
