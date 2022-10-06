@@ -838,7 +838,7 @@ def transaction(row, param = None):
             accounts['COMISS'] += calc['comiss']
             accounts['PNL'] += calc['sumreal']
             #print('------trade------', 'homeNotional='+str(row['homeNotional']), 'sumreal='+str(calc['sumreal']))
-            values = [row['execID'], emi, -1, row['symbol'], 99999, direct, abs(lastQty), row['leavesQty'], row['price'], 0, row['lastPx'], calc['sumreal'], calc['comiss'], 0, clientID, row['transactTime'], accounts['ACCOUNT']]
+            values = [row['execID'], emi, -1, row['symbol'], 99999, direct, abs(lastQty), row['leavesQty'], row['price'], 0, row['lastPx'], calc['sumreal'], calc['comiss'], 0, clientID, row['transactTime'][:-1], accounts['ACCOUNT']]
             insert_database(values)
             message = {'TICKER': row['symbol'], 'TTIME': row['transactTime'], 'DIR': direct, 'TRADE_PRICE': row['lastPx'], 'AMOUNT': abs(lastQty), 'EMI': emi}
             trades_display(message)
@@ -864,7 +864,7 @@ def transaction(row, param = None):
                     message['EMI'] = robots[emi]['EMI']
                     message['AMOUNT'] = robots[emi]['POS']
                     message['KOMISS'] = calc['funding']               
-                    values = [row['execID'], robots[emi]['EMI'], -1, row['symbol'], 99999, -1, robots[emi]['POS'], 0, row['price'], 0, row['price'], calc['sumreal'], calc['funding'], 0, 0, row['transactTime'], accounts['ACCOUNT']]
+                    values = [row['execID'], robots[emi]['EMI'], -1, row['symbol'], 99999, -1, robots[emi]['POS'], 0, row['price'], 0, row['price'], calc['sumreal'], calc['funding'], 0, 0, row['transactTime'][:-1], accounts['ACCOUNT']]
                     insert_database(values)            
                     #connect_mysql.commit()#????????????????? insert_database() alredy has this command
                     robots[emi]['COMISS'] += calc['funding']
@@ -881,7 +881,7 @@ def transaction(row, param = None):
                 message['EMI'] = robots[emi]['EMI']
                 message['AMOUNT'] = diff
                 message['KOMISS'] = calc['funding']
-                values = [row['execID'], robots[emi]['EMI'], -1, row['symbol'], 99999, -1, diff, 0, row['price'], 0, row['price'], calc['sumreal'], calc['funding'], 0, 0, row['transactTime'], accounts['ACCOUNT']]
+                values = [row['execID'], robots[emi]['EMI'], -1, row['symbol'], 99999, -1, diff, 0, row['price'], 0, row['price'], calc['sumreal'], calc['funding'], 0, 0, row['transactTime'][:-1], accounts['ACCOUNT']]
                 insert_database(values)
                 robots[emi]['COMISS'] += calc['funding']
                 robots[emi]['LTIME'] = time_struct
