@@ -64,7 +64,7 @@ CREATE TABLE `robots` (
   `SECUN` int DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-bitmex.py - main file
-init.ini - contains tickers
-history.ini - if the first line is 0 that means to download all trading history from Bitmex for connected account
-login_details.txt - two lines: api_key and api_secret of an account
+- bitmex.py - main file
+- init.ini - contains tickers
+- history.ini - if the first line is 0 that means to download all trading history from Bitmex for connected account
+- login_details.txt - two lines: api_key and api_secret of an account
