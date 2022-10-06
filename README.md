@@ -68,5 +68,5 @@ CREATE TABLE `robots` (
 ```
 - bitmex.py - main file
 - init.ini - contains tickers
-- history.ini - if the first line is 0 that means to download all trading history from Bitmex for connected account
+- history.ini - if the first line is 0, it means downloading the entire trading history from Bitmex for the connected account
 - login_details.txt - two lines: api_key and api_secret of an account
