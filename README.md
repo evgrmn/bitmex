@@ -40,6 +40,7 @@ CREATE TABLE `coins` (
   KEY `DIR_ix` (`DIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ```
+```SQL
 CREATE TABLE `robots` (
   `EMI` tinyint DEFAULT NULL,
   `ISIN` varchar(10) DEFAULT NULL,
@@ -64,7 +65,7 @@ CREATE TABLE `robots` (
   `PROCE` int DEFAULT '0',
   `SECUN` int DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+```
 - bitmex.py - main file
 - init.ini - contains tickers
 - history.ini - if the first line is 0 that means to download all trading history from Bitmex for connected account
