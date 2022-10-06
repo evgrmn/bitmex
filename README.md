@@ -1,9 +1,9 @@
 # A sample of algorithmic trading platform for Bitmex.
 
 Working condition tested on Linux:
-Mint 17, Python 3.4
-Debian 9, Python 3.5
-Debian 11, Python 3.9
+- Mint 17, Python 3.4
+- Debian 9, Python 3.5
+- Debian 11, Python 3.9
 
 This software is used for privat purposes only. Although the software has been in use for several years, bugs are possible.
 
