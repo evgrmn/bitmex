@@ -1,4 +1,5 @@
 # Sample algorithmic trading platform for Bitmex
+![Image](https://github.com/evgrmn/bitmex/sample.gif)
 
 Working condition tested on Linux:
 - Mint 17, Python 3.4
