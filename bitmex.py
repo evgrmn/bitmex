@@ -464,7 +464,7 @@ def symbol_num_add(robot_isin, robot_emi):
         
 #----------------Initialize not in list robot -------------------------         
 def not_in_list_init(emi, symbol, time_struct):
-    if time_struct < datetime(2021, 5, 31, 4, 30, 0) and row['symbol'] == 'XBTUSD': 					#Error patch. 100 XBTUSD min lot after 210531-0430
+    if time_struct < datetime(2021, 5, 31, 4, 30, 0) and symbol == 'XBTUSD': 					#Error patch. 100 XBTUSD min lot after 210531-0430
         emi = 0
     if emi == 0 and reserved_emi[symbol] != 'XBTUSD':					#Error patch. Sometimes non-XBTUSD closed with emi=0
         emi = reserved_emi[symbol]
