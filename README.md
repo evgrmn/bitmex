@@ -1,5 +1,4 @@
-# bitmex
-A sample of algorithmic trading platform for Bitmex.
+# A sample of algorithmic trading platform for Bitmex.
 
 Working condition tested on Linux:
 Mint 17, Python 3.4
