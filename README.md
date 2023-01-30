@@ -6,7 +6,7 @@ Working condition tested on Linux:
 - Debian 9, Python 3.5
 - Debian 11, Python 3.9
 
-This software is for personal use  only. Although the software has been in use for several years, bugs are possible.
+This software is for personal use only. Although the software has been in use for several years, bugs are possible.
 
 Codes may be redundant. This is due to uncertainties and inconsistencies in the processing of orders and transactions in automatic trading.
 
